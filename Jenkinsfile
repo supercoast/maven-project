@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name: 'tomcat-dev', defaultValue: '', description: 'Staging server')
-        string(name: 'tomcat-prod', defaultVaule: '', description: 'Production server')
-    }
-
     triggers {
         pollSCM('* * * * *')
     }
